@@ -66,6 +66,7 @@ function sendMessage(){
 function getNextStory(msg){
     $.post('sms', {
         body: msg,
+        dataType:"xml",
         from: getPhoneNumber()
     }, function(data, status){
         // debug, log the status
