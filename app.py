@@ -23,7 +23,8 @@ def sms():
 
 # a route where we will display a welcome message via an HTML template
 @app.route("/")
-def server():  
+def server():
     return render_template('index.html')
 
-app.run()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
