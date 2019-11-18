@@ -14,7 +14,7 @@ def sms():
     sMessage = request.form["body"]
     if nPhone not in dictUsers:
         dictUsers[nPhone] = Game()
-    aResponse = dictUsers[nPhone].takeTurn(nPhone, sMessage)
+    aResponse = dictUsers[nPhone].takeTurn(sMessage)
     sResponse = "<Response>"
     for sLine in aResponse:
         sResponse += "<Message>" + sLine + "</Message>"
