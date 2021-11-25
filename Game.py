@@ -37,3 +37,10 @@ class Game:
                     sNumbers += str(self.__nCurrent)
                 return[sNumbers]
                 
+if __name__ == '__main__':
+    oGame = Game()
+
+    while True:
+        sInput = input("> ")
+        sReturn = oGame.takeTurn(sInput)
+        print(sReturn)
